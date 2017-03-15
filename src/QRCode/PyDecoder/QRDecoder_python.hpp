@@ -24,7 +24,6 @@ class QRDecoder_python : public QRDecoderBase
         Py_Initialize();
         py::object global(py::import("__main__").attr("__dict__"));
         py::object pyFile=py::exec_file("static/qrdecoder.py", global, global);
-        pyFile.PyErr_Print();
         pyDecoder=global["decoder"];
         std::cout<<"extract"<<std::endl;
         //execute method decoder

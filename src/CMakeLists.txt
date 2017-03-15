@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.6)
 project(CppProject)
+set(CMAKE_CXX_STANDARD 11)
 set(Python_ADDITIONAL_VERSIONS 2.7)
 find_package(OpenCV REQUIRED )
 FIND_PACKAGE(PythonLibs REQUIRED)

@@ -7,4 +7,7 @@ def decoder(a):
         image.load()
 
     codes=zbarlight.scan_codes('qrcode',image)
-    return codes[0]
+    if(codes is None):
+        return ''
+    else:
+        return codes[0]

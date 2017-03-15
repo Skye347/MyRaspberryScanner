@@ -29,7 +29,7 @@ class QRDecoder_python : public QRDecoderBase
         }
         catch(boost::python::error_already_set&){
             PyErr_Print();
-            return 'error';
+            return "error";
         }
     }
   private:

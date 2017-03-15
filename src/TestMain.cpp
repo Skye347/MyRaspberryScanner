@@ -18,9 +18,6 @@ void stop_handler(int signo){
 
 int main(int argc,char** argv){
   signal(SIGINT,stop_handler);
-    // string a(argv[1]);
-    // QRDecoderDefault decoder;
-    // std::cout<<decoder.Decoder(a)<<endl;
   //声明IplImage指针  
   IplImage* pFrame = NULL;  
   
@@ -51,5 +48,4 @@ int main(int argc,char** argv){
 #ifdef SHOW_CAMWINDOW  
   cvDestroyWindow("video");
 #endif
-  running=false;
 }
